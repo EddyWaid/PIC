@@ -1,0 +1,9 @@
+Fonts used in this design:
+
+Font: Luckiest Guy
+Author: Astigmatic
+Url: https://fonts.google.com/specimen/Luckiest+Guy
+
+Font: Lato
+Author: Łukasz Dziedzic
+Url: https://fonts.google.com/specimen/Lato
