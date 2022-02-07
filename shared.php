@@ -4,8 +4,7 @@
 
     <!-- TOPBAR-->
     <div class="topBox" id="topBar">
-        <a href="index.php" class="topLink">Home</a>
-        <a href="#About" class="topLink">Chi sono</a>
+        <a href="#home" class="topLink selected">Home</a>
         <a href="#Video-lezioni" class="topLink">Video-lezioni</a>
         <a href="#Materiale" class="topLink">Materiale</a>
         <a href="#Speziali" class="topLink">Speciali</a>

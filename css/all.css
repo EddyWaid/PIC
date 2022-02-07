@@ -3,546 +3,138 @@
   src: url('LoveYaLikeASisterSolid.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
    url('LoveYaLikeASisterSolid.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
-
-        /* SFONDO CON NOME*/
-html{
-  background: url('img/pp1.png');
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+br {
+  content: '\A';
+  display: contents;
+  white-space: pre;
 }
-
-
-/* ----------SPAZIO INIZIALE PER EVIDENZIARE NOME---------- */
-.logo{
-  z-index: 1;
-  position: relative;
-  margin:0;
-  padding: 0;
-  height: 95%;
-}
-.cont{
-  position: relative;
-  box-shadow: 0px 2px 38px rgba(0, 0, 0, 0.5);
-  background: white;
-  width: 95%;
-  margin-left: 2.5%;
-  border-radius: 10px;
-}
-
-.iscriviti{
-  width: 15%;
-  position: fixed;
-  top:2%;
-  right:-15%;
-  height:30%;
-  z-index:3;
-  transition-property: right;
-  transition-duration: 1s;
-  transition-timing-function: ease-in-out;
-}
-.iscriviti img{
-  cursor: pointer;
-  position: absolute;
-  height: 100%;
-}
-.iscriviti:hover > .lose{
-  z-index: 4;
-}
-.iscriviti span{
-  left: 1%;
-  top: 5%;
-}
-
-
-
-
-
-
-
-
-        /* TOP BAR*/
-.topBox{
-  position: relative;
-  border-radius: 10px 10px 1px 1px;
-  background: steelblue;
-  text-align: center;
-  transition-property: width font-size opacity;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
-  font-size: 1.1vw;
-  display: block;
-  z-index:1;
-  height: 6%;
-  width: 100%;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-}
-.topLink{
-  margin-top: 0.7%;
-  font-weight: 600;
-  font-family: LYLAS;
-  border: none;
-  display: inline-block;
-  padding: 5px 16px;
-  vertical-align: middle;
-  overflow: hidden;
-  text-decoration: none;
-  color: white;
-  background-color: none;
-  text-align: center;
-  cursor: pointer;
-  white-space: nowrap;
-  text-shadow: 1px 1px black;
-}
-.topLink:hover
-{
-  color: #ff8c00;
-}
-.buttonDis{
-  font-size: 5px!important;
-  opacity: 0!important;
-}
-.topBox button {
-  cursor: pointer;
-  z-index: 2;
-  position: absolute;
-  bottom: 0.5vw;
-  right: 1%;
-	border-radius: 10px;
-	border: 1px solid #a92bb0;
-  background-image: linear-gradient(to right, #a92bb0, #f1a793 );
-	color: #FFFFFF;
-  font-weight: bold;
-  padding: 8px 36px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-  transition: width font-size opacity;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
-}
-.topBox button:hover{
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    margin: 3px 5px 7px;
-}
-
-.topBox button:active {
-	transform: scale(0.95);
-}
-
-.topBox button:focus {
-	outline: none;
-}
-
-.topBox button.ghost {
-	background-color: transparent;
-	border-color: #FFFFFF;
-}
-
-
-
-
-
-
-              /* POP UP SIGNUP/IN */
-.ErrtopBox{
-  display: none;
-  position: fixed;
-  bottom: 0;
-  height: 3.5%;
-  width: 100%;
-  box-shadow: 0 -2px 5px 0 rgba(0,0,0,0.16),0 -2px 10px 0 rgba(0,0,0,0.12);
-  background-color: rgba(255, 0, 0, 0.6); !important;
-  transition: background-color 200ms linear;
-}
-.popUp{
-  z-index: 4;
-  position: fixed;
-  top:0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
-  background-color: rgba(0,0,0,0.4);
-}
-.container h1{
-  font-weight: bold;
+body{
   margin: 0;
-}
-.container h2{
-  text-align: center;
-}
-.container p{
-  font-size: 14px;
-  font-weight: 100;
-  line-height: 20px;
-  letter-spacing: 0.5px;
-  margin: 20px 0 30px;
-}
-@keyframes errAP {
-  from {margin-top: -10px;color: white;height: 0;  margin-block-end: 0em;}
-  to {margin-top: 0px;color: red;height: 10; margin-block-end: 1em;}
-}
-.container .er{
-  height: 10;
-  color: red;
-  display: none;
-  font-size: 12px;
-  margin-block-start: 0em;
-  margin-block-end: 1em;
-  margin-inline-end: 0px;
-}
-.errAPP{
-  animation-name: errAP;
-  animation-duration: 3s;
-}
-.container span {
-	font-size: 12px;
+  background: white url(noise-pattern.png) repeat;
 }
 
-.container a {
-	color: #333;
-	font-size: 14px;
-	text-decoration: none;
-	margin: 15px 0;
-}
-.container button {
-	border-radius: 20px;
-  border: 1px solid #FFFFFF;
-	color: #FFFFFF;
-	font-size: 12px;
-	font-weight: bold;
-	padding: 12px 45px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	transition: transform 80ms ease-in;
-}
-.container button.Noghost {
-  background-color: #ff8c00;
-	border-color: #FFFFFF;
-}
-.container button.Noghost1 {
-  background-color: #ff8c00;
-	border-color: #FFFFFF;
-}
-
-.container button:active {
-	transform: scale(0.95);
-}
-
-.container button:focus {
-	outline: none;
-}
-
-.container button.ghost {
-	background-color: transparent!important;
-	border-color: #FFFFFF;
-}
-
-.container form {
-	background-color: #FFFFFF;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	padding: 0 50px;
-	height: 100%;
-	text-align: center;
-}
-
-.container input {
-	background-color: #eee;
-	border: none;
-	padding: 12px 15px;
-	margin: 8px 0;
-	width: 100%;
-}
-
-#popUp .container {
-	background-color: #fff;
-	border-radius: 10px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25),
-	0 10px 10px rgba(0,0,0,0.22);
-	position: relative;
-	overflow: hidden;
-	width: 50%;
-	max-width: 100%;
-	min-height: 75%;
-}
-
- .form-container {
-	position: absolute;
-	top: 0;
-	height: 100%;
-	transition: all 0.6s ease-in-out;
-}
-
- .sign-in-container {
-	left: 0;
-	width: 50%;
-	z-index: 6;
-}
-
- .container.right-panel-active .sign-in-container {
-	transform: translateX(100%);
-}
-
- .sign-up-container {
-	left: 0;
-	width: 50%;
-	opacity: 0;
-	z-index: 5;
-}
-
- .container.right-panel-active .sign-up-container {
-	transform: translateX(100%);
-	opacity: 1;
-	z-index: 9;
-	animation: show 0.6s;
-}
-
-@keyframes show {
-	0%, 49.99% {
-		opacity: 0;
-		z-index: 5;
-	}
-
-	50%, 100% {
-		opacity: 1;
-		z-index: 9;
-	}
-}
-
- .overlay-container {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	width: 50%;
-	height: 100%;
-	overflow: hidden;
-	transition: transform 0.6s ease-in-out;
-	z-index: 10;
-}
-
- .container.right-panel-active .overlay-container{
-	transform: translateX(-100%);
-}
-
- .overlay {
-	background: #ff8c00;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: 0 0;
-	color: #FFFFFF;
-	position: relative;
-	left: -100%;
-	height: 100%;
-	width: 200%;
-  	transform: translateX(0);
-	transition: transform 0.6s ease-in-out;
-}
-
- .container.right-panel-active .overlay {
-  	transform: translateX(50%);
-}
-
- .overlay-panel {
-	position: absolute;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	padding: 0 40px;
-	text-align: center;
-	top: 0;
-	height: 100%;
-	width: 50%;
-	transform: translateX(0);
-	transition: transform 0.6s ease-in-out;
-}
-
- .overlay-left {
-	transform: translateX(-20%);
-}
-
- .container.right-panel-active .overlay-left {
-	transform: translateX(0);
-}
-
- .overlay-right {
-	right: 0;
-	transform: translateX(0);
-}
-
- .container.right-panel-active .overlay-right {
-	transform: translateX(20%);
-}
-
-.close {
-  position: absolute;
-  right: 1%;
-  right: 20;
-  z-index: 11;
-  color: #aaaaaa;
-  font-size: 28px !important;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.err{
-  border: 1px solid red;
-  box-shadow: 0 0 3px red;
-}
-
-
-
-
-
-
-
-
-        /* SEZIONE VIDEO*/
-.video{
-  width: 100%;
-  height: 70%;
-  position: relative;
-  z-index: 10;
-}
-.video h1{
-  position: absolute;
-  top: 12%;
-  left: 23%;
-  font-family: LYLAS;
-  font-size: 50;
-  text-shadow: 1px 1px black;
-  color: #162f39;
-}
-.video h2{
-  position: absolute;
-  top: 27%;
-  left: 35%;
-  font-family: LYLAS;
-  text-shadow: 1px 1px black;
-  color: #162f39;
-}
-.video p{
-  position: absolute;
-  top: 35%;
-  left: 36%;
-  font-family: Arial Rounded MT Bold;
-  line-height:22px;
-}
-.video video{
-  position: absolute;
-  left: 14.8%;
-  top: 29%;
-  width: 15%;
-  height: 28%;
-}
-.tv{
-  position: absolute;
-  left: 10%;
-  top: 17%;
-  height: 60%;
-}
-.company{
-  position: absolute;
-  bottom: 0;
+.landing{
   right: 0;
-  height: 50%;
+  transition: right 3s;
+  position:relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-
-
-
-
-        /* SEZIONE MATERIALE*/
-.materie{
-  position: relative;
-  margin:0;
-  padding: 0;
-  height: 90%;
-  background-size: cover;
-  background-position: center;
-  text-align: center;
+.landing h1{
+  font-family: LYLAS;
+  font-size: 10vh;
 }
-.materie h1{
-  border-radius: 10px;
-  background: white;
+h1 .h1color{
+  color:#ff8c00;
+}
+
+.landing h2{
+  font-family: "Montserrat",sans-serif;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.landing button{
+  display: flex;
+  background-color: black;
+  color: white;
+  height: 50px;
+  border: none;
+}
+.landing .arrowBox{
+  right: 35px;
+}
+
+.arrowBox{
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow{
+  transition-duration: 0.5s;
+  transition-property: margin-left;
+  margin-left: 10px;
+  position: absolute;
+  border: solid black;
+  border-width: 0 3px 3px 0;
   display: inline-block;
-  position: relative;
+  padding: 40px;
+}
+.right{
+  transform: rotate(-45deg);
+}
+.left{
+  transform: rotate(135deg);
+}
+
+
+.choise{
+  cursor: pointer;
+  left: 200%;
+  position: absolute;
+  width: 100%;
+  height: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.choise:hover{
+  height: 35%;
+}
+.choise h1{
+  font-size: 50px;
+}
+
+.materiale{
+  transition: height 2s,left 2s ease 1s, top 1s;
+  top: 0;
+  background: #F13C20 url(noise-pattern.png) repeat;
+  z-index: 3;
+}
+.materiale img{
+  left: 30%;
+  top: 10%;
+  position: absolute;
+  height: 230;
+}
+
+
+.videolezioni{
+  transition: height 2s,left 2.5s ease 1s, top 1s;
+  top: 33%;
+  background: #D79922 url(noise-pattern.png) repeat;
+  z-index: 2;
+}
+.videolezioni img{
+  left: 62%;
+  top: 10%;
+  position: absolute;
+  height: 200;
+}
+.videolezioni .arrowBox{
+  left: 35px;
+}
+
+
+.speciali{
+  transition: height 2s,left 3s ease 1s, top 1s;
+  height: 34%;
+  top: 66%;
+  background: #4056A1 url(noise-pattern.png) repeat;
   z-index: 1;
-  font-family: LYLAS;
-  font-size: 50;
-  text-shadow: 1px 1px black;
-  color: #162f39;
 }
-.materie h2{
-  display: inline-block;
-  font-family: LYLAS;
-  text-shadow: 1px 1px black;
-  color: #162f39;
-  cursor: pointer;
-  margin: 0;
-}
-.matematica{
+.speciali img{
+  left: 30%;
+  top: 10%;
   position: absolute;
-  left: 3%;
-  top: 25%;
-  width: 25%;
-  height: 25%;
-}
-.grid{
-  position: absolute;
-  height: 78%;
-  width: 80%;
-  top: 22%;
-  left: 10%;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-template-rows: 50% 50%;
-  /*grid-column-gap: 1%;*/
-  grid-rows-gap: 1%;
-}
-.gridItem{
-
-}
-.grid > .gridItem:nth-child(n+5){
-  grid-column: span 2
-}
-.icona
-{
-  height: 50%;
-  cursor: pointer;
-  transition-property: height;
-  transition-duration: 1s;
-}
-.gridItem span:hover > .icona{
-  height: 60%;
-}
-.gridItem span:hover > h2{
-  color: #ff8c00
-}
-
-
-
-
-
-
-
-
-
-/*MOMENTANEO*/
-.spacer{
-  height: 5%;
-  background: transparent;
+  height: 230;
 }
